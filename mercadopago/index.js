@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
-import paymentRutas from './rutas/payment.rutas.js';
-import {PORT} from './config.js';
+import paymentRutas from './src/rutas/payment.rutas.js';
+import {PORT} from './src/config.js';
 
 import cors from 'cors'
 
