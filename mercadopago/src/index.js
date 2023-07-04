@@ -6,7 +6,15 @@ import {PORT} from './config.js';
 import cors from 'cors'
 
 const app = express();
-app.use(cors());
+app.use(cors(
+    {
+        origin : ['https://eccomerce-pocho-firebase-mercadopago.vercel.app/'],
+        methods : ['POST','GET'],
+        credentials : true
+    }
+));
+
+app.use(express.json());
 
 app.use(morgan('dev')); //Da informacion sobre las peticiones en mi consola
 app.get('/',(req,res)=> {
