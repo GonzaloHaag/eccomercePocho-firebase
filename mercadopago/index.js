@@ -12,6 +12,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 app.get('/', rutaPrincipal );
+app.get('/probandoruta',(req,res) => {
+    res.json({Funciona})
+})
 
 app.use(paymentRutas);
 
