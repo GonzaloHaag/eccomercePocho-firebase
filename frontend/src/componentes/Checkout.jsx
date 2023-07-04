@@ -54,7 +54,7 @@ const Checkout = () => {
        <input type='phone' placeholder='Ingresa tu telefono'{...register("telefono")} required/>
        <button className={styles.buttonComprar} type='submit'>Comprar</button>
        <button onClick={async () => {
-         const respuesta = await fetch('http://localhost:4000/create-order',{
+         const respuesta = await fetch('https://eccomerce-pocho-firebase-mercadopago.vercel.app/create-order',{ //Cambiar a localhost:4000/create-order
             method : 'POST'
          });
          const data = await respuesta.json();
