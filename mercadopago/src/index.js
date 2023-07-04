@@ -17,7 +17,7 @@ app.use(cors(
 app.use(express.json());
 
 app.use(morgan('dev')); //Da informacion sobre las peticiones en mi consola
-app.get('https://eccomerce-pocho-firebase-mercadopago.vercel.app/',(req,res)=> {
+app.get('/',(req,res)=> {
     res.json("Hello");
 })
 app.use(paymentRutas);
