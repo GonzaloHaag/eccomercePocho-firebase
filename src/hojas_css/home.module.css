@@ -1,0 +1,38 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: -2;
+}
+.logo{
+    width: 8em;
+}
+
+
+/*slider*/ 
+
+.slider-container {
+    width: 100%;
+    height: 2vh;
+}
+.slider-container img{
+    width: 100%;
+}
+
+.buttonVerTodosContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-inline: 2em;
+  margin-bottom: 2em;
+}
+.verTodos{
+  background-color: var(--colorLetraFuerte);
+  border-radius: 8px;
+  padding: 0.5em 0.8em;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  
+}

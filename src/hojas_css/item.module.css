@@ -1,0 +1,22 @@
+.producto img{
+    width: 100%;
+}
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.itemDetalles{
+    margin-top: 0.2em;
+}
+.itemDetalles h4{
+    font-size: 15px;
+    color: var(--colorLetraFuerte);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.itemDetallesPrecio{
+    font-weight: 700;
+    color: var(--colorLetraFuerte);
+    font-size: 20px;
+}

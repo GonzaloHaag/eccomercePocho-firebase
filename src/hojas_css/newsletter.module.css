@@ -1,0 +1,27 @@
+.newsletterText p{
+    padding-inline: 15px;
+    width: 90%;
+    color: var(--colorLetra);
+    font-size: 18px;
+}
+.formNewsletter{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 15px;
+    gap: 0.8em;
+}
+.formNewsletter input{
+    padding-block: 0.5em;
+    text-indent: 10px;
+    border: 2px solid gray;
+}
+.newsletterRegistro{
+    width: 8em;
+    margin: 0 auto;
+    background-color: var(--colorLetraFuerte);
+    padding-block: 0.5em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+}

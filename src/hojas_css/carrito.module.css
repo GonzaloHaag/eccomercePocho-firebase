@@ -1,0 +1,103 @@
+.carritoContainer img{
+    width: 5em;
+}
+.h1Cart{
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: black;
+}
+.cartPriceTotal{
+    margin-top: 0.2em;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cartPriceTotal span{
+    font-weight: 700;
+}
+.carritoContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+    inset: 0;
+    right: 0;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    padding: 4em 0.5em;
+}
+.carritoContainer.desplegarCart{
+    background-color: #fff;
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    z-index: 200;
+}
+.closeCart{
+    position: absolute;
+    top: 0.5%;
+    font-size: 30px;
+}
+.prodCarrito{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+.cartDetalles{
+    display: flex;
+    flex-direction: column;
+}
+.cartDetalles h2{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--colorLetraFuerte);
+}
+.cartProdPrecio{
+    font-size: 18px;
+    color: var(--colorLetraFuerte);
+}
+.removeProduct{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    font-size: 20px;
+}
+.divCartButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+.divCartButtons button{
+    background-color: var(--colorLetraFuerte);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding-block: 0.5em;
+    letter-spacing: 1.5px;
+    width: 100%;
+}
+.cartLink{
+    text-decoration: none;
+    color: #fff;
+}
+.cartPriceProd{
+   margin-top: 1.2em;
+}
+.cartPriceProd h2{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--colorLetraFuerte);
+}

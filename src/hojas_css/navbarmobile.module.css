@@ -1,0 +1,105 @@
+.navbarMobile{
+    margin-top: 1.2em;
+}
+.navbarMobile ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1.5em;
+}
+.linkNavbar{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+}
+.navbarLi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+
+}
+.navbarIcon{
+    font-size: 20px;
+}
+
+
+/*NAVBAR CATEGORIAS DE LOS PRODUCTOS */
+
+.navbarProductos{
+    position: fixed;
+    width: 100%;
+    height: 85vh;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em;
+    transform: translateY(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.navbarProductos.visible{
+    background-color: var(--colorLogo);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.navbarProductos ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2em;
+    gap: 2em;
+}
+.categoriasProductos{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+/*CATEGORIAS MATES */
+.openMenuMates{
+    font-size: 25px;
+}
+.closeMenuMates{
+    font-size: 25px;
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    color: #fff;
+}
+.menuCategoriasMates{
+    position: fixed;
+    width: 100%;
+    inset: 0;
+    padding-left: 4em;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.menuCategoriasMates.desplegarMates{
+    background-color: var(--colorLogo);
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+.menuCategoriasMates ul{
+    margin-top: 1.2em;
+}
+.linkCategoriasMates{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
