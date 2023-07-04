@@ -3,16 +3,10 @@ import morgan from 'morgan';
 import paymentRutas from './src/rutas/payment.rutas.js';
 import {PORT} from './src/config.js';
 
-import cors from 'cors'
+import cors from 'cors';
 
 const app = express();
-app.use(cors(
-    {
-        origin : 'https://eccomerce-pocho-firebase-mercadopago.vercel.app/',
-        methods : ['POST','GET'],
-        credentials : true
-    }
-));
+app.use(cors());
 
 app.use(express.json());
 
