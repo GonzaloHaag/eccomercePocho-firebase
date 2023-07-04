@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin : ["https://eccomerce-pocho-firebase-front.vercel.app/"], //Pagina donde esta el front
+        origin : ["https://eccomerce-pocho-firebase-front.vercel.app"], //Pagina donde esta el front
         methods : ['POST','GET'],
         credentials : true
     }
