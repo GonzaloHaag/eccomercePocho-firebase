@@ -29,6 +29,7 @@ export const createOrder = async (req,res) => {
 
 export const rutaPrincipal = async (req, res) => {
   res.json("Hello");
+  console.log('Hello')
 }
 
 export const reciveWebhook = async (req,res) => {
