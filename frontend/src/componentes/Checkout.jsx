@@ -34,6 +34,37 @@ const Checkout = () => {
             vaciarCarrito(); //Para vaciar el carrito luego de la compra
         })
     }
+    const handlePagarMercadoPago = async () => {
+        // const respuesta = await fetch('http://localhost:4000/create-order',{ //Cambiar a localhost:4000/create-order
+        //      method : 'POST'
+        //   });
+        //   const data = await respuesta.json();
+        //   console.log(data);
+        //   vaciarCarrito();
+        //   window.location.href = data.init_point; //Para que me lleve al pago al darle click al boton
+        const productos = carrito.map((prod) => ({
+            title: prod.titulo,
+            unit_price: Number(prod.precio),
+            currency_id: 'ARS',
+            quantity: prod.cantidad
+          }));
+        
+          const respuesta = await fetch('http://localhost:4000/create-order', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ items: productos })
+          });
+        
+          const data = await respuesta.json();
+          console.log(data);
+        //   window.location.href = data.init_point;
+        window.open(data.init_point, '_blank'); // Abre el init point en una nueva pestaña
+          vaciarCarrito();
+       
+    }
+ 
 
     if(pedidoId) {
         return ( //Corta el flujo del return de abajo, por lo tanto se mostrara en caso de haber un pedido ID
@@ -53,18 +84,12 @@ const Checkout = () => {
        <input type='email' placeholder='Ingresa tu e-mail' {...register("email")} required/>
        <input type='phone' placeholder='Ingresa tu telefono'{...register("telefono")} required/>
        <button className={styles.buttonComprar} type='submit'>Comprar</button>
-       <button onClick={async () => {
-         const respuesta = await fetch('http://localhost:4000/create-order',{ //Cambiar a localhost:4000/create-order
-            method : 'POST'
-         });
-         const data = await respuesta.json();
-         console.log(data);
-         window.location.href = data.init_point; //Para que me lleve al pago al darle click al boton
-       }}>Pagar con mercado pago</button>
+       <button onClick={handlePagarMercadoPago
+        //  const respuesta = await fetch('http://localhost:4000/create-order',{ //Cambiar a localhost:4000/create-order
+      }>Pagar con mercado pago</button>
     </form>
 
 </div>
   )
 }
-
-export default Checkout
+export default Checkout 

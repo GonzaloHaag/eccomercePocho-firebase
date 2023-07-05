@@ -10,7 +10,7 @@ router.get('/success',(req,res) => {
     res.send('pago success');
 });
 router.get('/failure',(req,res) => {
-    res.send('pago fallador');
+    res.send('pago fallado');
 });
 router.get('/pending',(req,res) => {
     res.send('pago pendiente');
