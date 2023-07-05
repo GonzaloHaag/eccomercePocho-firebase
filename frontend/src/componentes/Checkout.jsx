@@ -50,7 +50,7 @@ const Checkout = () => {
           }));
         
         //   const respuesta = await fetch('http://localhost:4000/create-order', {
-            const respuesta = await fetch('/create-order', {
+            const respuesta = await fetch('https://eccomerce-pocho-firebase.vercel.app/create-order', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
