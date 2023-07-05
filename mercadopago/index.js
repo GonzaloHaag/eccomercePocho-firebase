@@ -8,6 +8,10 @@ import { rutaPrincipal } from './src/controllers/payment.controller.js';
 const app = express();
 
 app.use(cors());
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://eccomerce-pocho-firebase-frontend.vercel.app');
+  next();
+});
 app.use(express.json());
 app.use(morgan('dev'));
 
