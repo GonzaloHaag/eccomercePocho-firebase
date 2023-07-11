@@ -19,6 +19,7 @@ const Header = () => {
     setOpenMenuHeader(!openMenuHeader);
 
   }
+  
 
   const handleOpenSearch = () => {
     setOpenSearch(!openSearch);

@@ -49,8 +49,9 @@ const Checkout = () => {
             quantity: prod.cantidad
           }));
         
-        //   const respuesta = await fetch('http://localhost:4000/create-order', {
-            const respuesta = await fetch('https://eccomerce-pocho-firebase.vercel.app/create-order', {
+          const respuesta = await fetch('http://localhost:4000/create-order', {
+            
+            
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

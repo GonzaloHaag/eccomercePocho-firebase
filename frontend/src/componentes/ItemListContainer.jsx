@@ -11,6 +11,10 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
   const categoria = useParams().categoria; //para saber lo que viene en la url
 
+  //Search
+  
+
+
 
   const location = useLocation();
   const url = location.pathname; //Me da la url donde estoy parado '/' o '/productos'

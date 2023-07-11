@@ -97,6 +97,11 @@ const NavbarMobile = () => { //prop que manda header
           </Link>
         </li>
         <li className={styles.categoriasProductos}>
+          <Link onClick={handleCerrarMenu} className={styles.categoriasProductos} to='/productos/termos'> {/*Despues el use params capta esto*/}
+          TERMOS
+          </Link>
+        </li>
+        <li className={styles.categoriasProductos}>
           <Link onClick={handleCerrarMenu} className={styles.categoriasProductos} to='/productos/accesorios'>
           ACCESORIOS
           </Link>
