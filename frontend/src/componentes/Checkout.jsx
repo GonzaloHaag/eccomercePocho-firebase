@@ -55,7 +55,8 @@ const Checkout = () => {
             
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': 'https://eccomerce-pocho-firebase-frontend.vercel.app/' // Reemplaza con la URL de tu frontend en Vercel
             },
             body: JSON.stringify({ items: productos })
           });
